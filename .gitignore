@@ -1,0 +1,17 @@
+.DS_Store
+node_modules
+logs-run/*
+logs-events/*
+*.log
+.idea/
+.nyc_output
+package-lock.json
+coverage
+mochawesome-report
+*audit.json
+dist/*
+test_reports/*
+junit.xml
+event_logs/*
+info.log
+package-lock.json

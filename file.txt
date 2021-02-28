@@ -1,0 +1,6 @@
+Create_parking_lot 1
+Create_parking_lot 2
+Create_parking_lot 3
+Create_parking_lot 4
+Create_parking_lot 5
+Create_parking_lot 6
