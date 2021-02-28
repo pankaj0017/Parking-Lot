@@ -1,6 +1,11 @@
-Create_parking_lot 1
-Create_parking_lot 2
-Create_parking_lot 3
-Create_parking_lot 4
-Create_parking_lot 5
-Create_parking_lot 6
+create_parking_lot 6
+park KA-01-HH-1234 driver_age 21
+park PB-01-HH-1234 driver_age 21
+slots_number_for_driver_of_age 21
+park PB-01-TG-2341 driver_age 40
+slots_number_for_car_with_number PB-01-HH-1234
+slots_number_for_car_with_number PB-01-HH-0000
+leave 2
+leave 4
+park HR-29-TG-3098 driver_age 39
+vehicle_registration_number_for_driver_of_a_age 18

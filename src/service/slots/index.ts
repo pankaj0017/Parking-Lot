@@ -13,7 +13,7 @@ export const createSlots = async (slotCapacity: number) => {
 };
 
 export const getAvailableSlotNumber = async () => {
-    const slots = await Slot.find({});
+    const slots = await Slot.find({ isAvailable: true });
     return _.chain(slots).map('slotNumber').min();
 };
 
