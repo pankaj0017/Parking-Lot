@@ -27,3 +27,26 @@ if fails
 4. open browser and visit http://localhost:5000/
 5. to check test coverage run 'jest --coverage' in terminal
 
+
+result:
+pankajjaiswal@UCLP1717 Parking-Lot (pankaj/parkingLot) $ jest --coverage
+ PASS  src/test/service/index.test.js
+  Tests for Parking Lot
+    Test for slots
+      ✓ should generate slots correctly (3 ms)
+      ✓ should park vehicle and store driver age (1 ms)
+      ✓ should return slot numbers for driver of age 21 (1 ms)
+      ✓ should return slot number for car
+      ✓ should leave the parking slot (1 ms)
+      ✓ should return vehicle registration numbers for driver of age 18
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |   75.71 |    58.82 |   73.68 |   78.57 |                   
+ index.ts |   75.71 |    58.82 |   73.68 |   78.57 | 71,76-77,81-95    
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+
+
