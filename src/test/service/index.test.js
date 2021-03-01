@@ -94,6 +94,5 @@ describe("Tests for Parking Lot", () => {
             expect(MockParkingDM.getCurrentParkingsOfDriversOfGivenAge).toHaveBeenCalledWith(18);
             expect(executeCommandLineResponse).toBe('Vehicle Registration Number of driver of age 18 are .');
         });
-
     });
 });
