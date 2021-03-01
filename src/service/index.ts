@@ -10,6 +10,7 @@ import {
     parkTheVehicle, removeParkings
 } from "./parkings";
 
+// this will clear old entries and create a new parking lot of given size
 const createParkingLot = async (slotCapacity: number): Promise<string> => {
     await removeSlots();
     await removeParkings();
@@ -17,6 +18,7 @@ const createParkingLot = async (slotCapacity: number): Promise<string> => {
     return `Created Parking lot of size ${slotCapacity}.`;
 };
 
+// this will park the vehicle to closest available slot. if no slot available then it will return Parking full message
 const parkVehicle = async (vehicleRegistrationPlate: string, ageOfDriver: number): Promise<string> => {
     const availableSlot: any = await getAvailableSlotNumber();
 
@@ -26,17 +28,20 @@ const parkVehicle = async (vehicleRegistrationPlate: string, ageOfDriver: number
     return `Vehicle ${vehicleRegistrationPlate} has been parked on slot ${availableSlot}. Age of Driver ${ageOfDriver}.`;
 };
 
+// to fetch all the slots where drive of given age have parked
 const getSlotsNumberOfDriverOfAge = async (ageOfDriver: number): Promise<string> => {
     const parkingDetails = await getCurrentParkingsOfDriversOfGivenAge(ageOfDriver);
     return `Slots are ${_.map(parkingDetails, 'slotNumber').join(', ')}.`;
 };
 
+// to fetch the slot where given vehicle is parked
 const getSlotNumberForCarWithNumberPlate = async (vehicleRegistrationPlate: string): Promise<string> => {
     const parkingInfo = await getCurrentParkingInfoByVehicleNumberPlate(vehicleRegistrationPlate);
     if (_.isNil(parkingInfo)) return `No such car present in parking lot.`;
     return `Vehicle ${vehicleRegistrationPlate} is present on slot ${_.get(parkingInfo, 'slotNumber')}.`;
 };
 
+// remove the vehicle from the slot
 const leaveTheParkingSlot = async (slot: number): Promise<string> => {
     const parkingInfo = await getCurrentParkingInfoBySlotNumber(slot);
     if (_.isNil(parkingInfo)) return `Slot ${slot} is already vacant.`;
@@ -45,12 +50,13 @@ const leaveTheParkingSlot = async (slot: number): Promise<string> => {
     return `Slot ${slot} is vacant now.`
 };
 
+// to fetch all the vehicle registration plate where drive of given age have parked
 const getVehicleRegistrationNumberForDriverOfAge = async (ageOfDriver: number): Promise<string> => {
     const parkingDetails = await getCurrentParkingsOfDriversOfGivenAge(ageOfDriver);
     return `Vehicle Registration Number of driver of age ${ageOfDriver} are ${_.map(parkingDetails, 'vehicleRegistrationPlate').join(', ')}.`;
 };
 
-
+// execute the line with respective controller
 export const executeCommandLine = async (line: string): Promise<string> => {
     if (_.isEmpty(line)) return '';
     const input = line.split(' ');
@@ -72,11 +78,14 @@ export const executeCommandLine = async (line: string): Promise<string> => {
     }
 };
 
+// to send response to web page localhost:5000
 const addToLogs = (header: string, logs: string, line: string) => {
     if (_.isEmpty(line)) return logs;
     return logs.concat(header, line) + '<br><br>';
 };
 
+
+// this will read the file line by line and execute them
 export const runParkingLotSystem = (req: Request, res: Response) => {
     let logs: string = '';
     const s = fs.createReadStream('file.txt')
