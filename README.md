@@ -52,47 +52,47 @@ Tests:       6 passed, 6 total
 
 result on Web:
 
-Command:  create_parking_lot 6
+Command:  Create_parking_lot 6
 
-Output:   Created Parking lot of size 6.
+Output:       Created Parking lot of size 6.
 
-Command:  park KA-01-HH-1234 driver_age 21
+Command:  Park KA-01-HH-1234 driver_age 21
 
-Output:   Vehicle KA-01-HH-1234 has been parked on slot 1. Age of Driver 21.
+Output:       Vehicle KA-01-HH-1234 has been parked on slot 1. Age of Driver 21.
 
-Command:  park PB-01-HH-1234 driver_age 21
+Command:  Park PB-01-HH-1234 driver_age 21
 
-Output:   Vehicle PB-01-HH-1234 has been parked on slot 2. Age of Driver 21.
+Output:       Vehicle PB-01-HH-1234 has been parked on slot 2. Age of Driver 21.
 
-Command:  slots_number_for_driver_of_age 21
+Command:  Slot_numbers_for_driver_of_age 21
 
-Output:   Slots are 1, 2.
+Output:       Slots are 1, 2.
 
-Command:  park PB-01-TG-2341 driver_age 40
+Command:  Park PB-01-TG-2341 driver_age 40
 
-Output:   Vehicle PB-01-TG-2341 has been parked on slot 3. Age of Driver 40.
+Output:       Vehicle PB-01-TG-2341 has been parked on slot 3. Age of Driver 40.
 
-Command:  slots_number_for_car_with_number PB-01-HH-1234
+Command:  Slot_number_for_car_with_number PB-01-HH-1234
 
-Output:   Vehicle PB-01-HH-1234 is present on slot 2.
+Output:       Vehicle PB-01-HH-1234 is present on slot 2.
 
-Command:  slots_number_for_car_with_number PB-01-HH-0000
+Command:  Slot_number_for_car_with_number PB-01-HH-0000
 
-Output:   No such car present in parking lot.
+Output:       No such car present in parking lot.
 
-Command:  leave 2
+Command:  Leave 2
 
-Output:   Slot 2 is vacant now.
+Output:       Slot 2 is vacant now.
 
-Command:  leave 4
+Command:  Leave 4
 
-Output:   Slot 4 is already vacant.
+Output:       Slot 4 is already vacant.
 
-Command:  park HR-29-TG-3098 driver_age 39
+Command:  Park HR-29-TG-3098 driver_age 39
 
-Output:   Vehicle HR-29-TG-3098 has been parked on slot 2. Age of Driver 39.
+Output:       Vehicle HR-29-TG-3098 has been parked on slot 2. Age of Driver 39.
 
-Command:  vehicle_registration_number_for_driver_of_a_age 18
+Command:  Vehicle_registration_number_for_driver_of_age 18
 
-Output:   Vehicle Registration Number of driver of age 18 are .
+Output:       Vehicle Registration Number of driver of age 18 are .
 

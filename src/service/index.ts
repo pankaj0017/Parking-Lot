@@ -61,17 +61,17 @@ export const executeCommandLine = async (line: string): Promise<string> => {
     if (_.isEmpty(line)) return '';
     const input = line.split(' ');
     switch (input[0]) {
-        case 'create_parking_lot':
+        case 'Create_parking_lot':
             return await createParkingLot(parseInt(input[1]));
-        case 'park':
+        case 'Park':
             return await parkVehicle(input[1], parseInt(input[3]));
-        case 'slots_number_for_driver_of_age':
+        case 'Slot_numbers_for_driver_of_age':
             return await getSlotsNumberOfDriverOfAge(parseInt(input[1]));
-        case 'slots_number_for_car_with_number':
+        case 'Slot_number_for_car_with_number':
             return await getSlotNumberForCarWithNumberPlate(input[1]);
-        case 'leave':
+        case 'Leave':
             return await leaveTheParkingSlot(parseInt(input[1]));
-        case 'vehicle_registration_number_for_driver_of_a_age':
+        case 'Vehicle_registration_number_for_driver_of_age':
             return await getVehicleRegistrationNumberForDriverOfAge(parseInt(input[1]));
         default:
             return 'Wrong input. Please use small case letters and verify input';
