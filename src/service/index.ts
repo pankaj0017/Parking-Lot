@@ -72,9 +72,9 @@ export const executeCommandLine = async (line: string): Promise<string> => {
     }
 };
 
-const addToLogs = (logs: string, line: string) => {
+const addToLogs = (header: string, logs: string, line: string) => {
     if (_.isEmpty(line)) return logs;
-    return logs.concat(line) + '<br><br>';
+    return logs.concat(header, line) + '<br><br>';
 };
 
 export const runParkingLotSystem = (req: Request, res: Response) => {
@@ -83,8 +83,8 @@ export const runParkingLotSystem = (req: Request, res: Response) => {
         .pipe(es.split())
         .pipe(es.mapSync(async function(line: string) {
                 s.pause();
-                logs = addToLogs(logs, line);
-                logs = addToLogs(logs, await executeCommandLine(line));
+                logs = addToLogs('Command: &nbsp;', logs, line);
+                logs = addToLogs('Output: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', logs, await executeCommandLine(line));
                 s.resume();
             })
                 .on('error', function(err: any) {
