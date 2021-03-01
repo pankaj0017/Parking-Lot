@@ -52,47 +52,47 @@ Tests:       6 passed, 6 total
 
 result on Web:
 
-Command:  Create_parking_lot 6
+Create_parking_lot 6
 
-Output:       Created Parking lot of size 6.
+Created parking of 6 slots
 
-Command:  Park KA-01-HH-1234 driver_age 21
+Park KA-01-HH-1234 driver_age 21
 
-Output:       Vehicle KA-01-HH-1234 has been parked on slot 1. Age of Driver 21.
+Car with vehicle registration number "KA-01-HH-1234" has been parked at slot number 1
 
-Command:  Park PB-01-HH-1234 driver_age 21
+Park PB-01-HH-1234 driver_age 21
 
-Output:       Vehicle PB-01-HH-1234 has been parked on slot 2. Age of Driver 21.
+Car with vehicle registration number "PB-01-HH-1234" has been parked at slot number 2
 
-Command:  Slot_numbers_for_driver_of_age 21
+Slot_numbers_for_driver_of_age 21
 
-Output:       Slots are 1, 2.
+1,2
 
-Command:  Park PB-01-TG-2341 driver_age 40
+Park PB-01-TG-2341 driver_age 40
 
-Output:       Vehicle PB-01-TG-2341 has been parked on slot 3. Age of Driver 40.
+Car with vehicle registration number "PB-01-TG-2341" has been parked at slot number 3
 
-Command:  Slot_number_for_car_with_number PB-01-HH-1234
+Slot_number_for_car_with_number PB-01-HH-1234
 
-Output:       Vehicle PB-01-HH-1234 is present on slot 2.
+2
 
-Command:  Slot_number_for_car_with_number PB-01-HH-0000
+Slot_number_for_car_with_number PB-01-HH-0000
 
-Output:       No such car present in parking lot.
+No such car present in parking lot.
 
-Command:  Leave 2
+Leave 2
 
-Output:       Slot 2 is vacant now.
+Slot 2 is vacant now.
 
-Command:  Leave 4
+Leave 4
 
-Output:       Slot 4 is already vacant.
+Slot 4 is already vacant.
 
-Command:  Park HR-29-TG-3098 driver_age 39
+Park HR-29-TG-3098 driver_age 39
 
-Output:       Vehicle HR-29-TG-3098 has been parked on slot 2. Age of Driver 39.
+Car with vehicle registration number "HR-29-TG-3098" has been parked at slot number 2
 
-Command:  Vehicle_registration_number_for_driver_of_age 18
+Vehicle_registration_number_for_driver_of_age 18
 
-Output:       Vehicle Registration Number of driver of age 18 are .
+
 
