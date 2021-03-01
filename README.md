@@ -50,7 +50,8 @@ Test Suites: 1 passed, 1 total
 Tests:       6 passed, 6 total
 
 
-on Web:
+result on Web:
+
 Command:  create_parking_lot 6
 
 Output:   Created Parking lot of size 6.
