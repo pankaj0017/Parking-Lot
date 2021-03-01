@@ -30,6 +30,8 @@ app.use(bodyParser.json());
 
 Server.buildServices(app);
 
+// trigger point to excute the file
 app.get('/', runParkingLotSystem);
 
+// this will host web server on http://localhost:5000/
 app.listen(5000, () => console.log('server running at port: 5000 ...'));
