@@ -92,8 +92,11 @@ export const runParkingLotSystem = (req: Request, res: Response) => {
         .pipe(es.split())
         .pipe(es.mapSync(async function(line: string) {
                 s.pause();
+                let output = await executeCommandLine(line);
+                console.log(line);
+                console.log(output);
                 logs = addToLogs('Command: &nbsp;', logs, line);
-                logs = addToLogs('Output: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', logs, await executeCommandLine(line));
+                logs = addToLogs('Output: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', logs, output);
                 s.resume();
             })
                 .on('error', function(err: any) {
