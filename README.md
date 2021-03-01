@@ -20,8 +20,10 @@ if above command failed then try
 if fails
 * npm uninstall -g typescript
 * npm install typescript --save-dev
-* ./node_modules/.bin/tsc
+* run './node_modules/.bin/tsc' or 'tsc'
 * run 'node dist/app.js'
 
 
 4. open browser and visit http://localhost:5000/
+5. to check test coverage run 'jest --coverage' in terminal
+

@@ -51,7 +51,7 @@ const getVehicleRegistrationNumberForDriverOfAge = async (ageOfDriver: number): 
 };
 
 
-const executeCommandLine = async (line: string): Promise<string> => {
+export const executeCommandLine = async (line: string): Promise<string> => {
     if (_.isEmpty(line)) return '';
     const input = line.split(' ');
     switch (input[0]) {
